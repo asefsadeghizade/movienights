@@ -22,7 +22,7 @@ class OmdbMovie:
 
         if key not in self.data:
             raise AttributeError(
-                f"{key} is not in datam please make sure this is a detail response"
+                f"{key} is not in data, please make sure this is a detail response"
             )
 
     @property
@@ -99,7 +99,7 @@ class OmdbClient:
                 seen_results += 1
                 yield OmdbMovie(movie)
 
-            if see_results >= total_results:
+            if seen_results >= total_results:
                 break
 
             page += 1

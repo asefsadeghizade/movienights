@@ -143,3 +143,5 @@ class Dev(Configuration):
             "level": "DEBUG",
         },
     }
+
+    OMDB_KEY = "81e72e58"
