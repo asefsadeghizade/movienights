@@ -34,7 +34,7 @@ def fill_movie_details(movie):
     movie.runtime_minutes = movie_details.runtime_minutes
     movie.genres.clear()
     for genre in get_or_create_genres(movie_details.genres):
-        movie.genre.add(genre)
+        movie.genres.add(genre)
     movie.is_full_record = True
     movie.save()
 
@@ -47,7 +47,7 @@ def search_and_save(search):
     normilized_search_term = re.sub(r"\s+", " ", search.lower())
 
     search_term, created = SearchTerm.objects.get_or_create(
-        name=normilized_search_term)
+        term=normilized_search_term)
 
     if not created and (search_term.last_search > now() - timedelta(days=1)):
         # Don't search as it has been searched recently

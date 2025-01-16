@@ -82,7 +82,7 @@ class OmdbClient:
     def search(self, search):
         """Search for movies by title. This is a generator so all results from all pages will be iterated across."""
         page = 1
-        see_results = 0
+        seen_results = 0
         total_results = None
 
         logger.info("Performing a search for '%s'", search)
