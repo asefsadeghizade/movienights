@@ -29,7 +29,11 @@ class Dev(Configuration):
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = True
 
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = [
+        'localhost',
+        '127.0.0.1',
+        'clubartist-saladcairo-8000.codio.io'
+    ]
 
     # Application definition
 
@@ -40,6 +44,7 @@ class Dev(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        "django_celery_results",
         "movies",
     ]
 
@@ -145,3 +150,6 @@ class Dev(Configuration):
     }
 
     OMDB_KEY = "81e72e58"
+
+    CELERY_RESULT_BACKEND = "django-db"
+    CELERY_BROKER_URL = "redis://localhost:6379/0"
