@@ -156,6 +156,6 @@ class Dev(Configuration):
     CELERY_BROKER_URL = "redis://localhost:6379/0"
 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    ADMINS = [("Ben", "ben@example.com")]
+    ADMINS = [("asef", "asef@example.com")]
 
     
