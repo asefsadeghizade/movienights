@@ -32,7 +32,7 @@ class Dev(Configuration):
     ALLOWED_HOSTS = [
         'localhost',
         '127.0.0.1',
-        'clubartist-saladcairo-8000.codio.io'
+        'globalmagnet-sabrinaedison-8000.codio.io'
     ]
 
     # Application definition
@@ -45,6 +45,7 @@ class Dev(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         "django_celery_results",
+        "django_celery_beat",
         "movies",
     ]
 
